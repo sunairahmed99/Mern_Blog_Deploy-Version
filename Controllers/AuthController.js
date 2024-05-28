@@ -2,7 +2,6 @@ const users = require("../Models/UserSchema");
 const AppError = require("../Utils/AppError");
 const ForgotEmail = require("../Utils/ForgotEmail");
 const tryCatch = require("../Utils/tryCatch");
-const bcrypt = require('bcrypt')
 const crypto = require('crypto')
 const fs = require('fs')
 const jwt = require('jsonwebtoken');
