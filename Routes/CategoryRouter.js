@@ -5,7 +5,7 @@ const {catupload} = require('../Multer/multer')
 
 const categoryRouter = express.Router()
 
-categoryRouter.route('/get').get(getallcategories)
+categoryRouter.route('/getdata/all').get(getallcategories)
 categoryRouter.route('/get/:id').get(getcategories)
 categoryRouter.route('/create').post(catupload.single('image'),createcategories)
 categoryRouter.route('/update/data/:id').patch(catupload.single('image'),updatecategories)
