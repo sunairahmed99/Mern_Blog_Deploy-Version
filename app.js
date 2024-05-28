@@ -3,7 +3,6 @@ const app = express()
 const cors = require('cors')
 const path = require('path')
 const ErrorController = require('./Controllers/ErrorController')
-const AppError = require('./Utils/AppError')
 const categoryRouter = require('./Routes/CategoryRouter')
 const HomeRouter = require('./Routes/HomedataRouter')
 const blogRouter = require('./Routes/blogRouter')
@@ -11,12 +10,13 @@ const UserRouter = require('./Routes/UserRouter')
 const commentRouter = require('./Routes/CommentRoutes')
 //require('./Multer/')
 
+app.use(express.static(path.resolve(__dirname,'build')))
 
 app.use(cors())
 app.options('*', cors());
 app.use(express.json())
 
-app.use(express.static(path.resolve(__dirname,'build')))
+
 
 
 app.use('/category',express.static('./Multer/images/category'))

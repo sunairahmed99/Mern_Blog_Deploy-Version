@@ -7,7 +7,7 @@ const blogRouter = express.Router()
 
 
 blogRouter.route('/getall').get(protect,getallBlog)
-blogRouter.route('/allblog').get(protect,allblog)
+blogRouter.route('/allblog').get(allblog)
 blogRouter.route('/getdata/:id').get(protect,getBlogdata)
 blogRouter.route('/getapprovedata').get(getapprovedata)
 blogRouter.route('/getsingleblog/:id').get(singleblogdata)
